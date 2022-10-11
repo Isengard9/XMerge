@@ -46,10 +46,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3200">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="3200" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -65,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665517442182</updated>
-      <workItem from="1665517450944" duration="3360000" />
+      <workItem from="1665517450944" duration="11904000" />
     </task>
     <servers />
   </component>
@@ -88,5 +88,50 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Systems/GridPart.cs</url>
+          <line>31</line>
+          <properties documentPath="C:\Users\Derbent\Desktop\NC\Case\GameGuru\XMerge\Assets\Scripts\Systems\GridPart.cs" initialLine="41" containingFunctionPresentation="method 'AddConnectedPart'">
+            <startOffsets>
+              <option value="850" />
+            </startOffsets>
+            <endOffsets>
+              <option value="885" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Systems/GridPart.cs</url>
+          <line>85</line>
+          <properties documentPath="C:\Users\Derbent\Desktop\NC\Case\GameGuru\XMerge\Assets\Scripts\Systems\GridPart.cs" initialLine="83" containingFunctionPresentation="method 'ControlSides'">
+            <startOffsets>
+              <option value="2548" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2569" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Systems/GridPart.cs</url>
+          <line>94</line>
+          <properties documentPath="C:\Users\Derbent\Desktop\NC\Case\GameGuru\XMerge\Assets\Scripts\Systems\GridPart.cs" initialLine="91" containingFunctionPresentation="method 'ControlSides'">
+            <startOffsets>
+              <option value="2769" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2810" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

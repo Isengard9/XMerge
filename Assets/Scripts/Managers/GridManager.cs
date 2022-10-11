@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Game.General.Systems;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Game.General.Managers
@@ -31,9 +32,31 @@ namespace Game.General.Managers
 
         #region Create Grid
 
-        private void CreateGrid()
+        public void SetLayout(int layoutIndex)
         {
+            switch (layoutIndex)
+            {
+                case 0:
+                    layout = GridLayout._5x5;
+                    break;
+                case 1:
+                    layout = GridLayout._7x7;
+                    break;
+                case 2:
+                    layout = GridLayout._9x9;
+                    break;
+            }
+        }
+        public void CreateGrid()
+        {
+            if (gridsParent is not null)
+            {
+                Destroy(gridsParent);
+            }
             gridsParent = new GameObject();
+
+            gridParts.Clear();
+            
             var gridLineCount = Mathf.Sqrt((int)layout);
             var gridStartValue = (int)(gridLineCount / 2);
             for (int i = gridStartValue * -1; i < gridStartValue + 1; i++)
@@ -42,7 +65,10 @@ namespace Game.General.Managers
                 {
                     var gridPart = Instantiate(gridPartPrefab,gridsParent.transform);
                     gridPart.transform.position = new Vector3(i, 0, j);
-                    gridParts.Add(gridPart.GetComponent<GridPart>());
+                    var gridPartS = gridPart.GetComponent<GridPart>();
+                    gridPartS.InitGridPart(new Vector2(i,j));
+                    gridParts.Add(gridPartS);
+                    gridPart.name = $"x{i} : y{j} ";
                 }
             }
             

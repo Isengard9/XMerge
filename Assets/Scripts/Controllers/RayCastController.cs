@@ -1,7 +1,6 @@
 ﻿using System;
 using Game.General.Systems;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Controllers
 {
