@@ -15,6 +15,14 @@ namespace Game.General.Managers
         [SerializeField]
         private GameManager gameManager;
         public GameManager GameManager => gameManager;
+
+        [SerializeField]
+        private GridManager gridManager;
+        public GridManager GridManager => gridManager;
+
+        [SerializeField]
+        private CameraManager cameraManager;
+        public CameraManager CameraManager => cameraManager;
         
         private void Awake()
         {

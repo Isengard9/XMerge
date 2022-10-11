@@ -34,6 +34,12 @@ namespace Game.General.Managers
 
         #endregion
 
+        protected override void OnStart()
+        {
+            base.OnStart();
+            GameStarted?.Invoke();
+        }
+
         #region Game Functions
 
         protected override void OnGameStarted()
